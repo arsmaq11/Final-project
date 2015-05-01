@@ -32,25 +32,36 @@
             this.WRITE = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.height = new System.Windows.Forms.Label();
-            this.stylefon1 = new System.Windows.Forms.Label();
             this.sifont2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.styfont1 = new System.Windows.Forms.ListBox();
             this.fontsiz2 = new System.Windows.Forms.ListBox();
             this.Height1 = new System.Windows.Forms.ListBox();
             this.pictureup = new System.Windows.Forms.PictureBox();
-            this.width2 = new System.Windows.Forms.ListBox();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureup)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // WRITE
             // 
             this.WRITE.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.WRITE.BackColor = System.Drawing.SystemColors.Info;
-            this.WRITE.Location = new System.Drawing.Point(3, 12);
+            this.WRITE.Location = new System.Drawing.Point(12, 52);
             this.WRITE.MaxLength = 500;
             this.WRITE.Name = "WRITE";
             this.WRITE.Size = new System.Drawing.Size(263, 194);
@@ -76,18 +87,6 @@
             this.height.TabIndex = 10;
             this.height.Text = "Height";
             // 
-            // stylefon1
-            // 
-            this.stylefon1.AutoSize = true;
-            this.stylefon1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stylefon1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.stylefon1.Location = new System.Drawing.Point(209, 305);
-            this.stylefon1.Name = "stylefon1";
-            this.stylefon1.Size = new System.Drawing.Size(36, 13);
-            this.stylefon1.TabIndex = 14;
-            this.stylefon1.Text = " Font";
-            this.stylefon1.Click += new System.EventHandler(this.label6_Click);
-            // 
             // sifont2
             // 
             this.sifont2.AutoSize = true;
@@ -104,27 +103,13 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(503, 457);
+            this.button1.Location = new System.Drawing.Point(495, 471);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 64);
             this.button1.TabIndex = 17;
             this.button1.Text = "Convert";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // styfont1
-            // 
-            this.styfont1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.styfont1.FormattingEnabled = true;
-            this.styfont1.Items.AddRange(new object[] {
-            "Arial",
-            "Times new roman",
-            "Sn franscisco"});
-            this.styfont1.Location = new System.Drawing.Point(268, 305);
-            this.styfont1.Name = "styfont1";
-            this.styfont1.Size = new System.Drawing.Size(120, 17);
-            this.styfont1.TabIndex = 19;
-            this.styfont1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // fontsiz2
             // 
@@ -171,7 +156,7 @@
             this.pictureup.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureup.BackgroundImage")));
             this.pictureup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureup.Location = new System.Drawing.Point(803, 4);
+            this.pictureup.Location = new System.Drawing.Point(793, 52);
             this.pictureup.Name = "pictureup";
             this.pictureup.Size = new System.Drawing.Size(250, 192);
             this.pictureup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,40 +164,108 @@
             this.pictureup.TabStop = false;
             this.pictureup.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // width2
+            // menuStrip1
             // 
-            this.width2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.width2.FormattingEnabled = true;
-            this.width2.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50"});
-            this.width2.Location = new System.Drawing.Point(83, 305);
-            this.width2.Name = "width2";
-            this.width2.Size = new System.Drawing.Size(120, 17);
-            this.width2.TabIndex = 24;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.fontToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1148, 24);
+            this.menuStrip1.TabIndex = 26;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // label5
+            // fileToolStripMenuItem
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Location = new System.Drawing.Point(19, 309);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Width";
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.openToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
+            this.aboutUsToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // label2
+            // newToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(899, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "upload";
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Text = "Save as";
+            // 
+            // aboutUsToolStripMenuItem
+            // 
+            this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutUsToolStripMenuItem.Text = "About us";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHelpToolStripMenuItem,
+            this.feedbackToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // viewHelpToolStripMenuItem
+            // 
+            this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewHelpToolStripMenuItem.Text = "View help";
+            // 
+            // feedbackToolStripMenuItem
+            // 
+            this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.feedbackToolStripMenuItem.Text = "feedback";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pasteToolStripMenuItem,
+            this.viewToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pasteToolStripMenuItem.Text = "Paste";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewToolStripMenuItem.Text = "view";
+            // 
+            // fontDialog1
+            // 
+            this.fontDialog1.Apply += new System.EventHandler(this.fontDialog1_Apply);
+            // 
+            // fontToolStripMenuItem
+            // 
+            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // text2image
             // 
@@ -220,27 +273,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1148, 750);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.width2);
             this.Controls.Add(this.pictureup);
             this.Controls.Add(this.Height1);
             this.Controls.Add(this.fontsiz2);
-            this.Controls.Add(this.styfont1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sifont2);
-            this.Controls.Add(this.stylefon1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.height);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.WRITE);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1164, 1000);
             this.Name = "text2image";
             this.Text = "text2image";
             this.Load += new System.EventHandler(this.text2image_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureup)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,17 +303,27 @@
         private System.Windows.Forms.RichTextBox WRITE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label height;
-        private System.Windows.Forms.Label stylefon1;
         private System.Windows.Forms.Label sifont2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox styfont1;
         private System.Windows.Forms.ListBox fontsiz2;
         private System.Windows.Forms.ListBox Height1;
         private System.Windows.Forms.PictureBox pictureup;
-        private System.Windows.Forms.ListBox width2;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
     }
 }
 

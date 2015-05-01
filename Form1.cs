@@ -61,7 +61,17 @@ namespace blue
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            FontDialog dlg = new FontDialog();
+            dlg.ShowDialog();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string fontName;
+                float fontSize;
+                fontName = dlg.Font.Name;
+                fontSize = dlg.Font.Size;
+                MessageBox.Show(fontName + "    " + fontSize);
+            }
             
             
 
@@ -176,11 +186,49 @@ namespace blue
 
         }
 
-       
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
+        }
 
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+             FontDialog dlg = new FontDialog();
+            dlg.ShowDialog();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string fontName;
+                float  fontSize;
+                fontName = dlg.Font.Name;
+                fontSize = dlg.Font.Size;
+                MessageBox.Show(fontName + "    " + fontSize );
+            }
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog dlg = new FontDialog();
+            dlg.ShowDialog();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string fontName;
+                float  fontSize;
+                fontName = dlg.Font.Name;
+                fontSize = dlg.Font.Size;
+                MessageBox.Show(fontName + "    " + fontSize );
+            }
+        }
+        }
     }
-}
+
+        
 
 
 
