@@ -102,7 +102,7 @@ namespace blue
 
                
 
-                pictureup.Size = new System.Drawing.Size(400, 400);
+                pictureup.Size = new System.Drawing.Size(300, 400);
                 Graphics G = Graphics.FromImage(img);
                 G.DrawString(WRITE.Text, new Font("Tahoma", 40), Brushes.Black, new Point(20,20));
 
@@ -225,9 +225,22 @@ namespace blue
                 MessageBox.Show(fontName + "    " + fontSize );
             }
         }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             ColorDialog dlg = new ColorDialog();
+            dlg.ShowDialog();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string str = null;
+                str = dlg.Color.Name;
+                MessageBox.Show (str);
+            }
         }
     }
-
+}
+        
         
 
 
