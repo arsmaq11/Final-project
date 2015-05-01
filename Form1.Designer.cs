@@ -66,12 +66,13 @@
             // WRITE
             // 
             this.WRITE.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.WRITE.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.WRITE.Location = new System.Drawing.Point(25, 110);
+            this.WRITE.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.WRITE.ForeColor = System.Drawing.Color.GhostWhite;
+            this.WRITE.Location = new System.Drawing.Point(22, 117);
             this.WRITE.MaxLength = 500;
             this.WRITE.Name = "WRITE";
             this.helpProvider1.SetShowHelp(this.WRITE, true);
-            this.WRITE.Size = new System.Drawing.Size(491, 62);
+            this.WRITE.Size = new System.Drawing.Size(360, 88);
             this.WRITE.TabIndex = 1;
             this.WRITE.Text = "";
             this.WRITE.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -218,7 +219,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Desktop;
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(96, 80);
+            this.label1.Location = new System.Drawing.Point(73, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 13);
             this.label1.TabIndex = 27;
@@ -292,7 +293,7 @@
             this.pictureup.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.pictureup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureup.BackgroundImage")));
             this.pictureup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureup.Location = new System.Drawing.Point(216, 262);
+            this.pictureup.Location = new System.Drawing.Point(218, 284);
             this.pictureup.Name = "pictureup";
             this.pictureup.Size = new System.Drawing.Size(350, 214);
             this.pictureup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

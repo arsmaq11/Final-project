@@ -104,7 +104,7 @@ namespace blue
 
                 pictureup.Size = new System.Drawing.Size(300, 400);
                 Graphics G = Graphics.FromImage(img);
-                G.DrawString(WRITE.Text, new Font("Tahoma", 40), Brushes.Black, new Point(20,20));
+                G.DrawString(WRITE.Text, new Font("Tahoma", 25), Brushes.Black, new Point(20,20));
 
 
 
