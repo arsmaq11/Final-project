@@ -32,7 +32,6 @@
             this.WRITE = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureup = new System.Windows.Forms.PictureBox();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,14 +58,15 @@
             this.jpegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureup)).BeginInit();
+            this.pictureup = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureup)).BeginInit();
             this.SuspendLayout();
             // 
             // WRITE
             // 
             this.WRITE.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.WRITE.BackColor = System.Drawing.SystemColors.Info;
+            this.WRITE.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.WRITE.Location = new System.Drawing.Point(25, 110);
             this.WRITE.MaxLength = 500;
             this.WRITE.Name = "WRITE";
@@ -89,27 +89,13 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.SlateBlue;
             this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Location = new System.Drawing.Point(591, 565);
+            this.button1.Location = new System.Drawing.Point(668, 622);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 48);
             this.button1.TabIndex = 17;
             this.button1.Text = "Convert";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureup
-            // 
-            this.pictureup.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureup.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureup.BackgroundImage")));
-            this.pictureup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureup.Location = new System.Drawing.Point(99, 263);
-            this.pictureup.Name = "pictureup";
-            this.pictureup.Size = new System.Drawing.Size(350, 214);
-            this.pictureup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureup.TabIndex = 23;
-            this.pictureup.TabStop = false;
-            this.pictureup.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // menuStrip1
             // 
@@ -225,10 +211,12 @@
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Desktop;
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
             this.label1.Location = new System.Drawing.Point(96, 80);
             this.label1.Name = "label1";
@@ -290,6 +278,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Desktop;
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
             this.label2.Location = new System.Drawing.Point(96, 227);
             this.label2.Name = "label2";
@@ -297,12 +286,27 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "2.Add your background";
             // 
+            // pictureup
+            // 
+            this.pictureup.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureup.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.pictureup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureup.BackgroundImage")));
+            this.pictureup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureup.Location = new System.Drawing.Point(216, 262);
+            this.pictureup.Name = "pictureup";
+            this.pictureup.Size = new System.Drawing.Size(350, 214);
+            this.pictureup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureup.TabIndex = 23;
+            this.pictureup.TabStop = false;
+            this.pictureup.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // text2image
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 750);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -316,13 +320,13 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(800, 788);
+            this.MaximumSize = new System.Drawing.Size(900, 788);
             this.Name = "text2image";
             this.Text = "text2image";
             this.Load += new System.EventHandler(this.text2image_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureup)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureup)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,7 +337,6 @@
         private System.Windows.Forms.RichTextBox WRITE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureup;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -360,6 +363,7 @@
         private System.Windows.Forms.ToolStripMenuItem jpegToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pngToolStripMenuItem;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureup;
     }
 }
 

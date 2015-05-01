@@ -238,8 +238,22 @@ namespace blue
                 MessageBox.Show (str);
             }
         }
+
+        private void colorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+             ColorDialog dlg = new ColorDialog();
+            dlg.ShowDialog();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string str = null;
+                str = dlg.Color.Name;
+                MessageBox.Show (str);
+            }
+        }
     }
 }
+       
         
         
 
