@@ -155,9 +155,18 @@ namespace blue
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SaveFileDialog dialog = new SaveFileDialog();
+if (dialog.ShowDialog() == DialogResult.OK)
+{
+    string path = dialog.FileName;
+    MessageBox.Show(path);
+   
+
+
+}
+           
             
-            pictureup.PerformLayout();
-            WRITE.PerformLayout();
+            
             
         }
 
